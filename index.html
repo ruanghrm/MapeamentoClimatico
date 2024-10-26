@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo - Belém</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="map"></div>
+
+    <div id="info-panel" class="hide">
+        <div id="close-panel" onclick="closeInfoPopup()">
+            <i class="fas fa-times"></i>
+        </div>
+        
+        <div id="info-content"></div>
+        
+        <h3>Emissão de Gases Tóxicos</h3>
+        
+        <div id="year-selection">
+            <button onclick="selectYear(2020)">2020</button>
+            <button onclick="selectYear(2021)">2021</button>
+            <button onclick="selectYear(2022)">2022</button>
+            <button onclick="selectYear(2023)">2023</button>
+        </div>
+
+        <h3>Transportes</h3>
+        <div id="transport-icons">
+            <i class="fas fa-walking" title="A pé"></i>
+            <i class="fas fa-bicycle" title="Bicicleta"></i>
+            <i class="fas fa-car" title="Automóvel"></i>
+            <i class="fas fa-ship" title="Balsa"></i>
+            <i class="fas fa-motorcycle" title="Motocicleta"></i>
+            <i class="fas fa-bus" title="Ônibus"></i>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
