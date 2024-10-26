@@ -115,8 +115,8 @@ h3 {
     }
 
     #year-selection button {
-        padding: 8px 12px; /* Reduzindo o padding para botões menores */
-        font-size: 14px; /* Diminuindo o tamanho da fonte */
+        padding: 8px 12px;
+        font-size: 14px; 
     }
 
     #transport-icons {
