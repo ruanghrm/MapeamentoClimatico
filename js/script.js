@@ -10,6 +10,76 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
+
+// Define o ícone com um tamanho fixo
+const treeIcon = L.icon({
+    iconUrl: 'data/tree.png', // URL da imagem do ícone
+    iconSize: [20, 20], // Tamanho do ícone
+    iconAnchor: [10, 10], // Âncora para posicionar corretamente o ícone
+});
+
+
+// Função para carregar múltiplos arquivos GeoJSON e adicionar os ícones de árvore ao mapa
+function loadTreeIcons() {
+    const treeFiles = [
+        'data/output_data.geojson',
+        'data/dados_inventario_marco.geojson'
+    ];
+
+    // Usamos Promise.all para carregar todos os arquivos de uma vez
+    Promise.all(treeFiles.map(file => fetch(file).then(response => {
+        if (!response.ok) throw new Error(`Erro ao carregar o arquivo GeoJSON: ${file}`);
+        return response.json();
+    })))
+    .then(datasets => {
+        datasets.forEach(data => {
+            L.geoJson(data, {
+                pointToLayer: function (feature, latlng) {
+                    if (map.getZoom() >= 15) { // Nível de zoom ajustado para 16
+                        const marker = L.marker(latlng, { icon: treeIcon });
+
+                        // Adiciona eventos de mouse para interatividade
+                        marker.on('mouseover', function() {
+                            this.setIcon(L.icon({
+                                iconUrl: 'data/tree_highlighted.png', // URL da imagem destacada
+                                iconSize: [20, 20], // Tamanho do ícone
+                                iconAnchor: [10, 10] // Âncora para posicionar corretamente o ícone
+                            }));
+                        });
+
+                        marker.on('mouseout', function() {
+                            this.setIcon(treeIcon); // Restaura o ícone original
+                        });
+
+                        return marker; // Retorna o marcador
+                    }
+                    return null; // Retorna null para não mostrar o ícone se o zoom for menor
+                }
+            }).addTo(map);
+        });
+    })
+    .catch(error => console.error('Erro ao carregar os arquivos GeoJSON:', error));
+}
+
+// Carrega os ícones inicialmente
+loadTreeIcons();
+
+
+// Adiciona um evento para atualizar a visibilidade dos ícones ao dar zoom
+map.on('zoomend', function() {
+    // Limpa os marcadores existentes
+    map.eachLayer(function(layer) {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+
+    // Adiciona novamente os ícones conforme o novo nível de zoom
+    loadTreeIcons();
+});
+
+
+
 // Função de estilo dos bairros
 function style(feature) {
     return {
@@ -172,7 +242,7 @@ function updateDashboard(infoContent, bairroId) {
 
         fetch(dashboardUrl)
             .then(response => {
-                return response.json();
+                return response.text();
             })
             .then(data => {
                 infoContent.innerHTML = `<p>Dados de Transporte: ${JSON.stringify(data, null, 2)}</p>`;

@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Previne rolagem indesejada */
 }
 
 #map {
@@ -41,26 +42,22 @@ body, html {
 }
 
 /* Container de informações */
-.info-panel {
-    display: flex;
-    flex-direction: column; /* Garante que os gráficos sejam empilhados verticalmente */
-    padding: 20px; /* Adiciona espaço em volta do painel */
-    height: 100%; /* Ajusta a altura para ocupar o espaço do painel */
-}
-
-/* Conteúdo do painel */
 #info-content {
     display: flex;
     flex-direction: column; /* Garante que os gráficos sejam empilhados verticalmente */
     flex-grow: 1; /* Permite que o conteúdo ocupe o espaço disponível */
+    margin-top: 20px; /* Espaçamento superior */
 }
 
-/* Container para gráficos */
+/* Gráficos */
 .chart-container {
-    margin: 20px 0; /* Espaçamento entre os gráficos */
     width: 100%; /* Para garantir que eles ocupem toda a largura disponível */
-    height: 300px; /* Altura fixa para evitar sobreposição */
-    overflow: hidden; /* Garante que nada transborde */
+    height: 200px; /* Altura ajustada para os gráficos */
+    margin-bottom: 20px; /* Espaçamento entre os gráficos */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Botão de fechar o painel */
@@ -154,28 +151,80 @@ body, html {
 
 #dashboard-frame {
     width: 100%;
-    height: 400px;
+    height: 310px; /* Altura ajustada para encaixar no frame */
     border: none;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#transport-chart, #building-chart, #impact-chart, #emissions-chart {
-    width: 100%;
-    height: 300px; /* Garantindo altura para todos os gráficos */
-    border: 1px solid #ddd;
-    border-radius: 8px;
+/* Container para o botão toggle flutuante */
+#toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
 }
 
-.sensor-data {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-    margin-top: 10px;
+/* Estilos para o botão switch */
+.switch {
+    position: relative;
+    display: inline-flex;
+    width: 173px; /* Definimos a largura total para as duas opções */
+    height: 34px;
 }
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #001eff;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "Município";
+    height: 30px;
+    width: 90px; /* Metade do switch */
+    left: 2px;
+    bottom: 2px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 34px;
+    text-align: center;
+    line-height: 30px;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(80px); /* Movimento total para a outra extremidade */
+    content: "Bairros";
+    background-color: #fff;
+    color: #333;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -200,7 +249,8 @@ body, html {
     }
 
     /* Manter altura consistente em dispositivos menores */
-    #dashboard-frame, #transport-chart, #building-chart, #impact-chart, #emissions-chart {
-        height: 250px;  /* Ajustando a altura para dispositivos menores */
+    #dashboard-frame, .chart-container {
+        height: 200px; /* Ajustando a altura para dispositivos menores */
     }
 }
+

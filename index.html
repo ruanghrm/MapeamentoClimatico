@@ -12,13 +12,21 @@
 <body>
     <div id="map"></div>
 
+    <!-- Botão flutuante para alternar entre Bairros e Município -->
+    <div id="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="toggle-layer" onclick="toggleLayer()">
+            <span class="slider"></span>
+        </label>
+    </div>
+
     <div id="info-panel" class="hide">
         <div id="close-panel" onclick="closeInfoPopup()">
             <i class="fas fa-times"></i>
         </div>
         
         <h2>Mapa de Qualidade do Ar - Belém do Pará</h2>
-        
+
         <div id="year-selection">
             <button onclick="selectYear(2020)">2020</button>
             <button onclick="selectYear(2021)">2021</button>
@@ -46,10 +54,8 @@
             <div id="emissions-chart" style="margin-bottom: 20px;"></div>
             <div id="impact-chart" style="margin-bottom: 20px;"></div>
         </div>
-        
-        
-        
-    
+    </div>
+
     <!-- Importação dos scripts -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/script.js"></script>
