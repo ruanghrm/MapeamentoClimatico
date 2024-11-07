@@ -1,32 +1,25 @@
-// Inicialização do mapa
 const map = L.map('map').setView([-1.4558, -48.4902], 12);
 let selectedLayer = null;
 let selectedYearButton = null;
 let selectedTransportIcon = null;
 
-// Camada de mapas base
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-
-// Define o ícone com um tamanho fixo
 const treeIcon = L.icon({
-    iconUrl: 'data/tree.png', // URL da imagem do ícone
-    iconSize: [20, 20], // Tamanho do ícone
-    iconAnchor: [10, 10], // Âncora para posicionar corretamente o ícone
+    iconUrl: 'data/tree.png',
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
 });
 
-
-// Função para carregar múltiplos arquivos GeoJSON e adicionar os ícones de árvore ao mapa
 function loadTreeIcons() {
     const treeFiles = [
         'data/output_data.geojson',
         'data/dados_inventario_marco.geojson'
     ];
 
-    // Usamos Promise.all para carregar todos os arquivos de uma vez
     Promise.all(treeFiles.map(file => fetch(file).then(response => {
         if (!response.ok) throw new Error(`Erro ao carregar o arquivo GeoJSON: ${file}`);
         return response.json();
@@ -35,25 +28,24 @@ function loadTreeIcons() {
         datasets.forEach(data => {
             L.geoJson(data, {
                 pointToLayer: function (feature, latlng) {
-                    if (map.getZoom() >= 15) { // Nível de zoom ajustado para 16
+                    if (map.getZoom() >= 15) {
                         const marker = L.marker(latlng, { icon: treeIcon });
 
-                        // Adiciona eventos de mouse para interatividade
                         marker.on('mouseover', function() {
                             this.setIcon(L.icon({
-                                iconUrl: 'data/tree_highlighted.png', // URL da imagem destacada
-                                iconSize: [20, 20], // Tamanho do ícone
-                                iconAnchor: [10, 10] // Âncora para posicionar corretamente o ícone
+                                iconUrl: 'data/tree_highlighted.png',
+                                iconSize: [20, 20],
+                                iconAnchor: [10, 10]
                             }));
                         });
 
                         marker.on('mouseout', function() {
-                            this.setIcon(treeIcon); // Restaura o ícone original
+                            this.setIcon(treeIcon);
                         });
 
-                        return marker; // Retorna o marcador
+                        return marker;
                     }
-                    return null; // Retorna null para não mostrar o ícone se o zoom for menor
+                    return null;
                 }
             }).addTo(map);
         });
@@ -61,26 +53,17 @@ function loadTreeIcons() {
     .catch(error => console.error('Erro ao carregar os arquivos GeoJSON:', error));
 }
 
-// Carrega os ícones inicialmente
 loadTreeIcons();
 
-
-// Adiciona um evento para atualizar a visibilidade dos ícones ao dar zoom
 map.on('zoomend', function() {
-    // Limpa os marcadores existentes
     map.eachLayer(function(layer) {
         if (layer instanceof L.Marker) {
             map.removeLayer(layer);
         }
     });
-
-    // Adiciona novamente os ícones conforme o novo nível de zoom
     loadTreeIcons();
 });
 
-
-
-// Função de estilo dos bairros
 function style(feature) {
     return {
         color: "#2262CC",
@@ -90,7 +73,19 @@ function style(feature) {
     };
 }
 
-// Destaque visual ao passar o mouse sobre um bairro
+function selectYear(year) {
+    if (selectedYearButton) {
+        selectedYearButton.classList.remove('selected');
+    }
+
+    selectedYearButton = document.querySelector(`button[onclick="selectYear(${year})"]`);
+    selectedYearButton.classList.add('selected');
+
+    const infoContent = document.getElementById("info-content");
+    const bairroId = selectedLayer ? selectedLayer.feature.properties.ID : null;
+    updateDashboard(infoContent, bairroId);
+}
+
 function highlightFeature(e) {
     const layer = e.target;
     layer.setStyle({
@@ -100,14 +95,12 @@ function highlightFeature(e) {
     });
 }
 
-// Restaura o estilo ao remover o mouse do bairro
 function resetHighlight(e) {
     if (e.target !== selectedLayer) {
         geoJsonLayer.resetStyle(e.target);
     }
 }
 
-// Clique em um bairro para abrir o painel de informações
 function onFeatureClick(e) {
     if (selectedLayer) {
         geoJsonLayer.resetStyle(selectedLayer);
@@ -123,35 +116,60 @@ function onFeatureClick(e) {
     openInfoPanel(e.target.feature.properties);
 }
 
-// Carregar e exibir os bairros de Belém
 let geoJsonLayer;
-fetch("data/Bairros_Belem.geojson")
-    .then(response => {
-        if (!response.ok) throw new Error('Erro ao carregar o arquivo GEOJSON');
-        return response.json();
-    })
-    .then(data => {
-        geoJsonLayer = L.geoJson(data, {
-            style: style,
-            onEachFeature: (feature, layer) => {
-                layer.on({
-                    mouseover: highlightFeature,
-                    mouseout: resetHighlight,
-                    click: onFeatureClick
-                });
+function loadGeoJsonLayer(url) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) throw new Error('Erro ao carregar o arquivo GeoJSON');
+            return response.json();
+        })
+        .then(data => {
+            if (geoJsonLayer) {
+                map.removeLayer(geoJsonLayer);
             }
-        }).addTo(map);
-    })
-    .catch(error => console.error("Erro:", error));
+            geoJsonLayer = L.geoJson(data, {
+                style: style,
+                onEachFeature: (feature, layer) => {
+                    layer.on({
+                        mouseover: highlightFeature,
+                        mouseout: resetHighlight,
+                        click: onFeatureClick
+                    });
+                }
+            }).addTo(map);
+        })
+        .catch(error => console.error("Erro:", error));
+}
 
-// Abre o painel de informações
+function switchGeoJsonLayer(layerName) {
+    const layerUrls = {
+        bairros: 'data/Bairros_Belem.geojson',
+        municipios: 'data/BELEM_GEOJSON_.geojson'
+    };
+
+    const url = layerUrls[layerName];
+    if (url) {
+        loadGeoJsonLayer(url);
+    } else {
+        console.warn('Camada GeoJSON não encontrada:', layerName);
+    }
+}
+
+switchGeoJsonLayer('bairros');
+
+function toggleLayer() {
+    const switchButton = document.getElementById('toggle-layer');
+    const currentLayer = switchButton.checked ? 'municipios' : 'bairros';
+    switchGeoJsonLayer(currentLayer);
+}
+
+document.getElementById('toggle-layer').addEventListener('change', toggleLayer);
+
 function openInfoPanel(properties) {
     const infoPanel = document.getElementById("info-panel");
     const bairroId = properties.ID;
 
-    // Atualiza o dashboard e busca dados de edifícios
     updateDashboard(document.getElementById("info-content"), bairroId);
-
     fetchBuildingData("eficiencia_energetica");
     fetchBuildingData("grafico_emissoes");
     fetchBuildingData("distribuicao_impacto");
@@ -160,32 +178,22 @@ function openInfoPanel(properties) {
     infoPanel.classList.remove("hide");
 }
 
-// Buscar dados dos edifícios e atualizar o gráfico
 function fetchBuildingData(tipoAnalise) {
     const buildingDataUrl = `http://127.0.0.1:8000/gerar_grafico/${tipoAnalise}`;
 
     fetch(buildingDataUrl)
         .then(response => {
-            console.log("Response status:", response.status);
-            console.log("Content-Type:", response.headers.get("Content-Type"));
-
             if (!response.ok) {
                 throw new Error(`Erro na requisição! status: ${response.status}`);
             }
-
-            return response.text(); // Retorna a resposta como texto
+            return response.text();
         })
         .then(data => {
-            console.log(`Dados recebidos para ${tipoAnalise}:`, data); // Log dos dados recebidos
-
-            // Exibe o HTML recebido no painel
             const containerId = tipoAnalise === "eficiencia_energetica" ? 'building-chart' :
                 tipoAnalise === "grafico_emissoes" ? 'emissions-chart' :
                 'impact-chart';
 
-            document.getElementById(containerId).innerHTML = data; // Coloca o HTML recebido no contêiner apropriado
-
-            // Se necessário, execute o código do gráfico aqui, se você estiver recebendo o script para renderizar o gráfico
+            document.getElementById(containerId).innerHTML = data;
             const scripts = document.getElementById(containerId).getElementsByTagName('script');
             for (let i = 0; i < scripts.length; i++) {
                 eval(scripts[i].innerText);
@@ -194,7 +202,6 @@ function fetchBuildingData(tipoAnalise) {
         .catch(error => console.error("Erro ao carregar dados dos edifícios:", error));
 }
 
-// Fecha o painel de informações e redefine o estilo
 function closeInfoPopup() {
     const infoPanel = document.getElementById("info-panel");
     infoPanel.classList.add("hide");
@@ -209,21 +216,6 @@ function closeInfoPopup() {
     }
 }
 
-// Seleciona o ano e atualiza o botão de seleção
-function selectYear(year) {
-    if (selectedYearButton) {
-        selectedYearButton.classList.remove('selected');
-    }
-
-    selectedYearButton = document.querySelector(`button[onclick="selectYear(${year})"]`);
-    selectedYearButton.classList.add('selected');
-
-    const infoContent = document.getElementById("info-content");
-    const bairroId = selectedLayer ? selectedLayer.feature.properties.ID : null;
-    updateDashboard(infoContent, bairroId);
-}
-
-// Função para atualizar o dashboard
 function updateDashboard(infoContent, bairroId) {
     const selectedYear = selectedYearButton ? selectedYearButton.textContent : null;
     const selectedTransport = selectedTransportIcon ? selectedTransportIcon.title.toUpperCase() : null;
@@ -233,19 +225,19 @@ function updateDashboard(infoContent, bairroId) {
 
         const dashboardFrame = document.getElementById("dashboard-frame");
 
-        // Apenas atualiza o src do iframe se for diferente
         if (dashboardFrame.src !== dashboardUrl) {
             dashboardFrame.src = dashboardUrl;
         }
-
- 
 
         fetch(dashboardUrl)
             .then(response => {
                 return response.text();
             })
             .then(data => {
-                infoContent.innerHTML = `<p>Dados de Transporte: ${JSON.stringify(data, null, 2)}</p>`;
+                const transportDataContainer = document.getElementById("info-content");
+
+                const transportData = `<p>Dados de Transporte: ${JSON.stringify(data, null, 2)}</p>`;
+                transportDataContainer.innerHTML = transportDataContainer.innerHTML.replace(/Dados de Transporte:.*/, transportData);
             })
             .catch(error => console.error("Erro ao carregar o dashboard:", error));
     } else {
@@ -253,14 +245,12 @@ function updateDashboard(infoContent, bairroId) {
     }
 }
 
-// Eventos para os botões de ano
 document.querySelectorAll('#year-selection button').forEach(button => {
     button.addEventListener('click', function () {
         selectYear(parseInt(this.textContent));
     });
 });
 
-// Eventos para os ícones de transporte
 document.querySelectorAll('#transport-icons i').forEach(icon => {
     icon.addEventListener('click', function () {
         if (selectedTransportIcon) {

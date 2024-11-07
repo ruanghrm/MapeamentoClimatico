@@ -12,13 +12,13 @@
 <body>
     <div id="map"></div>
 
-    <!-- Botão flutuante para alternar entre Bairros e Município -->
-    <div id="toggle-container">
-        <label class="switch">
-            <input type="checkbox" id="toggle-layer" onclick="toggleLayer()">
-            <span class="slider"></span>
-        </label>
-    </div>
+<div id="toggle-container">
+    <label class="switch">
+        <input type="checkbox" id="toggle-layer">
+        <span class="slider"></span>
+    </label>
+</div>
+
 
     <div id="info-panel" class="hide">
         <div id="close-panel" onclick="closeInfoPopup()">
@@ -56,7 +56,6 @@
         </div>
     </div>
 
-    <!-- Importação dos scripts -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/script.js"></script>
 </body>
