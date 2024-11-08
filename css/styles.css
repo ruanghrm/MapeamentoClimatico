@@ -3,6 +3,14 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333;
 }
 
 #map {
@@ -10,7 +18,7 @@ body, html {
     width: 100vw;
 }
 
-#info-panel { 
+#info-panel {
     width: 30%;        
     height: 90%;       
     position: fixed;   
@@ -43,6 +51,23 @@ body, html {
     flex-direction: column;
     flex-grow: 1;
     margin-top: 20px;
+}
+
+#info-panel p {
+    font-size: 1.25rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+#temperatura {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f61; 
+}
+
+#precipitacao {
+    font-size: 1.5rem;
+    color: #2e8b57; 
 }
 
 .chart-container {
@@ -156,7 +181,9 @@ body, html {
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-direction: column; 
     align-items: center;
+    gap: 10px; 
     z-index: 1000;
 }
 
@@ -198,7 +225,7 @@ body, html {
     text-align: center;
     line-height: 30px;
     color: #333;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -212,6 +239,47 @@ input:checked + .slider:before {
     background-color: #fff;
     color: #333;
 }
+
+#toggle-arborizacao + .slider {
+    background-color: #ccc;
+}
+
+#toggle-arborizacao:checked + .slider {
+    background-color: #4CAF50;
+}
+
+#toggle-arborizacao + .slider:before {
+    content: "Arborização";
+}
+
+
+#weather-data {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+    background-color: white; 
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    z-index: 9999; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px;
+}
+
+#weather-data p {
+    margin: 5px 0; 
+    font-size: 16px;
+}
+
+#weather-data p#temperatura {
+    font-weight: bold;
+}
+
+#weather-data p#precipitacao {
+    font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
     #info-panel {

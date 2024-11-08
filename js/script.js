@@ -14,10 +14,47 @@ const treeIcon = L.icon({
     iconAnchor: [10, 10],
 });
 
+function loadWeatherData() {
+    document.getElementById('temperatura').innerHTML = `<i class="fas fa-thermometer-half"></i> Carregando temperatura...`;
+    document.getElementById('precipitacao').innerHTML = `<i class="fas fa-cloud-showers-heavy"></i> Carregando precipitação...`;
+
+    const apiUrl = 'https://api.open-meteo.com/v1/forecast?latitude=-1.4555&longitude=-48.4902&current_weather=true&hourly=precipitation';
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const temperature = data.current_weather.temperature;
+            const precipitation = data.hourly.precipitation[0];
+
+            const temperaturaElement = document.getElementById('temperatura');
+            const precipitacaoElement = document.getElementById('precipitacao');
+
+            temperaturaElement.innerHTML = `<i class="fas fa-thermometer-half"></i> Temperatura: ${temperature}°C`;
+
+            precipitacaoElement.innerHTML = `<i class="fas fa-cloud-showers-heavy"></i> Precipitação: ${precipitation}mm`;
+
+            console.log(`Atualização: Temperatura = ${temperature}°C, Precipitação = ${precipitation}mm`);
+        })
+        .catch(error => {
+            console.error("Erro ao carregar os dados meteorológicos:", error);
+            document.getElementById('temperatura').textContent = "Erro ao carregar a temperatura.";
+            document.getElementById('precipitacao').textContent = "Erro ao carregar a precipitação.";
+        });
+}
+
+window.onload = () => {
+    loadWeatherData();
+    setInterval(loadWeatherData, 60000);
+};
+
+
+let arborizacaoLayers = [];
+
 function loadTreeIcons() {
     const treeFiles = [
         'data/output_data.geojson',
-        'data/dados_inventario_marco.geojson'
+        'data/dados_inventario_marco.geojson',
+        'data/Coordenadas.geojson'
     ];
 
     Promise.all(treeFiles.map(file => fetch(file).then(response => {
@@ -25,10 +62,13 @@ function loadTreeIcons() {
         return response.json();
     })))
     .then(datasets => {
+        arborizacaoLayers.forEach(layer => map.removeLayer(layer));
+        arborizacaoLayers = []; 
+
         datasets.forEach(data => {
-            L.geoJson(data, {
+            const layer = L.geoJson(data, {
                 pointToLayer: function (feature, latlng) {
-                    if (map.getZoom() >= 15) {
+                    if (map.getZoom() >= 13) {
                         const marker = L.marker(latlng, { icon: treeIcon });
 
                         marker.on('mouseover', function() {
@@ -47,22 +87,35 @@ function loadTreeIcons() {
                     }
                     return null;
                 }
-            }).addTo(map);
+            });
+            arborizacaoLayers.push(layer);
+
+            if (document.getElementById('toggle-arborizacao').checked) {
+                layer.addTo(map);
+            }
         });
     })
     .catch(error => console.error('Erro ao carregar os arquivos GeoJSON:', error));
 }
 
-loadTreeIcons();
+function toggleArborizacaoLayer() {
+    const switchButton = document.getElementById('toggle-arborizacao');
+    if (switchButton.checked) {
+        loadTreeIcons();
+    } else {
+        arborizacaoLayers.forEach(layer => map.removeLayer(layer));
+    }
+}
 
 map.on('zoomend', function() {
-    map.eachLayer(function(layer) {
-        if (layer instanceof L.Marker) {
-            map.removeLayer(layer);
-        }
-    });
-    loadTreeIcons();
+    if (document.getElementById('toggle-arborizacao').checked) {
+        arborizacaoLayers.forEach(layer => map.removeLayer(layer));
+        loadTreeIcons();
+    }
 });
+
+document.getElementById('toggle-arborizacao').addEventListener('change', toggleArborizacaoLayer);
+
 
 function style(feature) {
     return {

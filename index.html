@@ -12,13 +12,26 @@
 <body>
     <div id="map"></div>
 
-<div id="toggle-container">
-    <label class="switch">
-        <input type="checkbox" id="toggle-layer">
-        <span class="slider"></span>
-    </label>
-</div>
+    <div id="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="toggle-layer">
+            <span class="slider"></span>
+        </label>
+    
+        <label class="switch">
+            <input type="checkbox" id="toggle-arborizacao">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
 
+    <h1>Previsão do Tempo para Belém</h1>
+    
+    <div id="weather-data">
+        <p id="temperatura"><i class="fas fa-thermometer-half"></i> Carregando temperatura...</p>
+        <p id="precipitacao"><i class="fas fa-cloud-showers-heavy"></i> Carregando precipitação...</p>
+    </div>
+    
 
     <div id="info-panel" class="hide">
         <div id="close-panel" onclick="closeInfoPopup()">
