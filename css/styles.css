@@ -230,7 +230,7 @@ h1 {
 }
 
 input:checked + .slider {
-    background-color: #4CAF50;
+    background-color: #001eff;
 }
 
 input:checked + .slider:before {
@@ -252,6 +252,80 @@ input:checked + .slider:before {
     content: "Arborização";
 }
 
+#toggle-bairros-container {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+#toggle-bairros {
+    display: none;
+}
+
+.switch-bairros {
+    position: relative;
+    display: inline-flex;
+    width: 50px;
+    height: 24px;
+}
+
+.switch-bairros input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-bairros {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider-bairros:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-bairros {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider-bairros:before {
+    transform: translateX(26px);
+}
+
+#toggle-vegetacao + .slider {
+    background-color: #ccc;
+}
+
+#toggle-vegetacao:checked + .slider {
+    background-color: #4CAF50;
+}
+
+#toggle-vegetacao + .slider:before {
+    content: "Vegetação";
+    color: #333;
+}
 
 #weather-data {
     position: fixed;
@@ -280,6 +354,10 @@ input:checked + .slider:before {
     font-weight: bold;
 }
 
+#weather-data p#sensacao_termica {
+    font-weight: bold;
+    color: orangered
+}
 
 @media (max-width: 768px) {
     #info-panel {

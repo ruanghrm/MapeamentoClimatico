@@ -1,0 +1,2997 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.469722222222224,
+                    -1.4424166666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 7.65,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.46963888888889,
+                    -1.442388888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 8.5,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.46966666666667,
+                    -1.4424166666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Annacardium occidentale",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.46955555555556,
+                    -1.4424166666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 9.35,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.46958333333333,
+                    -1.4424444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.46966666666667,
+                    -1.4423611111111112
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 6.8,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47052777777778,
+                    -1.44225
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 4.25,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47072222222222,
+                    -1.4423333333333332
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 5.95,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47097222222222,
+                    -1.4423055555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 5.1,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47163888888889,
+                    -1.442388888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 10.2,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47163888888889,
+                    -1.4421944444444446
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíeae",
+                "Altura (m)": 4.25,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47163888888889,
+                    -1.4421944444444446
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíeae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47288888888889,
+                    -1.4422777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Plumeria pudica",
+                "Família": "Apocynaceae",
+                "Altura (m)": 5.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472833333333334,
+                    -1.44225
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 5.6,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47302777777778,
+                    -1.4423333333333332
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 5.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47336111111111,
+                    -1.4423611111111112
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47477777777778,
+                    -1.4410555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474583333333335,
+                    -1.441
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47419444444444,
+                    -1.441
+                ]
+            },
+            "properties": {
+                "Espécie": "Syzygium jambos",
+                "Família": "Myrtaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47377777777778,
+                    -1.4408611111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47291666666667,
+                    -1.4405833333333333
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47211111111111,
+                    -1.4406388888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíeae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47211111111111,
+                    -1.4406388888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíeae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47211111111111,
+                    -1.4406388888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíeae",
+                "Altura (m)": 5.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.471916666666665,
+                    -1.4405555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.471333333333334,
+                    -1.4404444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47116666666667,
+                    -1.4405277777777779
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.470194444444445,
+                    -1.4413055555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Morinda citrifolia",
+                "Família": "Rosaceae",
+                "Altura (m)": 2.8,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.470111111111116,
+                    -1.4413888888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": null,
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.470083333333335,
+                    -1.4414444444444445
+                ]
+            },
+            "properties": {
+                "Espécie": "Nerium oleander",
+                "Família": "Apocynaceae",
+                "Altura (m)": 2.9,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47313888888889,
+                    -1.445861111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.473444444444446,
+                    -1.445861111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47352777777778,
+                    -1.445861111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Pinus sp.",
+                "Família": "Pinaceae",
+                "Altura (m)": 3.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47363888888889,
+                    -1.445861111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474805555555555,
+                    -1.4458333333333333
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 4.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.445888888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": null,
+                "Altura (m)": null,
+                "Estado Geral": "Morta"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475944444444444,
+                    -1.4453333333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": null,
+                "Altura (m)": 5.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475944444444444,
+                    -1.4451666666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475944444444444,
+                    -1.4447777777777777
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475944444444444,
+                    -1.4446666666666668
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 2.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.476,
+                    -1.4441111111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 5.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.476,
+                    -1.44375
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 2.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.476,
+                    -1.4435
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47211111111111,
+                    -1.4424166666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47230555555556,
+                    -1.4424444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 2.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47227777777778,
+                    -1.4424722222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47241666666667,
+                    -1.4425555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 6.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47241666666667,
+                    -1.4434444444444445
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472611111111114,
+                    -1.4428055555555557
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472611111111114,
+                    -1.4430277777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 9.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47263888888889,
+                    -1.443
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 4.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47280555555556,
+                    -1.4431666666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47244444444445,
+                    -1.4423611111111112
+                ]
+            },
+            "properties": {
+                "Espécie": "Prunus domestica",
+                "Família": "Rosaceae",
+                "Altura (m)": 4.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47266666666667,
+                    -1.443361111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 4.7,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472833333333334,
+                    -1.443638888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 5.8,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472833333333334,
+                    -1.443638888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472833333333334,
+                    -1.4437777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.471722222222226,
+                    -1.4439444444444445
+                ]
+            },
+            "properties": {
+                "Espécie": "Psidium guajava",
+                "Família": "Myrtaceae",
+                "Altura (m)": 2.3,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472388888888894,
+                    -1.4440555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 4.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47247222222222,
+                    -1.4440555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474333333333334,
+                    -1.4442777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 5.6,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474361111111115,
+                    -1.4442777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 5.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47652777777778,
+                    -1.44175
+                ]
+            },
+            "properties": {
+                "Espécie": "Cassia sp.",
+                "Família": "Fabaceae",
+                "Altura (m)": 3.8,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47475,
+                    -1.442388888888889
+                ]
+            },
+            "properties": {
+                "Espécie": " Mangifera indica",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 5.8,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47477777777778,
+                    -1.4422777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 4.2,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474833333333336,
+                    -1.4421944444444446
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474916666666665,
+                    -1.4419722222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 3.2,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474916666666665,
+                    -1.4419722222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 2.9,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474944444444446,
+                    -1.4416944444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 5.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474944444444446,
+                    -1.4416944444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 9.1,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47497222222223,
+                    -1.4416666666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": "Identificar",
+                "Altura (m)": 5.3,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475,
+                    -1.4415833333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 10.2,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475,
+                    -1.4415555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 5.3,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47502777777778,
+                    -1.4415277777777777
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 11.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47497222222223,
+                    -1.4415
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 9.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47508333333334,
+                    -1.4415277777777777
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 13.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47505555555556,
+                    -1.4414166666666668
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 11.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47508333333334,
+                    -1.4414166666666668
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47505555555556,
+                    -1.441361111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 12.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47505555555556,
+                    -1.4413055555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 4.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.473333333333336,
+                    -1.4390555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47127777777778,
+                    -1.4428055555555557
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 2.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.471444444444444,
+                    -1.4429166666666666
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 4.7,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.471000000000004,
+                    -1.4430277777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Oiti",
+                "Altura (m)": 6.2,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.470888888888894,
+                    -1.4447222222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Annacardium occidentale",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 2.1,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47091666666667,
+                    -1.444888888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 5.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47091666666667,
+                    -1.4450277777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 5.1,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.470333333333336,
+                    -1.44525
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 3.6,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.470194444444445,
+                    -1.4451944444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 2.15,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47163888888889,
+                    -1.4453333333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47222222222222,
+                    -1.4453333333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472611111111114,
+                    -1.4455
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 6.75,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47269444444445,
+                    -1.44575
+                ]
+            },
+            "properties": {
+                "Espécie": "Andira uxi",
+                "Família": "Fabaceae",
+                "Altura (m)": 6.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47266666666667,
+                    -1.4448611111111112
+                ]
+            },
+            "properties": {
+                "Espécie": "Licania tomentosa",
+                "Família": "Chrysobalanaceae",
+                "Altura (m)": 8.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472750000000005,
+                    -1.4445555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.8,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.472750000000005,
+                    -1.4445555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Psidium guajava",
+                "Família": "Myrtaceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.4745,
+                    -1.4439722222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47258333333333,
+                    -1.4415833333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Adenanthera pavonina",
+                "Família": "Fabaceae",
+                "Altura (m)": 9.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47236111111111,
+                    -1.4414166666666668
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 8.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47236111111111,
+                    -1.4414444444444445
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47227777777778,
+                    -1.4413888888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47222222222222,
+                    -1.4413888888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47225,
+                    -1.4413888888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anarcadiaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.473333333333336,
+                    -1.4415555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47522222222222,
+                    -1.4407222222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 7.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47522222222222,
+                    -1.4409166666666666
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 8.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47522222222222,
+                    -1.4408611111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 9.9,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47525,
+                    -1.4408333333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": null,
+                "Estado Geral": "Morta"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47502777777778,
+                    -1.4407777777777777
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": null,
+                "Estado Geral": "Morta"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47552777777778,
+                    -1.44075
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47530555555556,
+                    -1.44075
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 8.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47530555555556,
+                    -1.4406388888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47530555555556,
+                    -1.4406666666666668
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": "Identificar",
+                "Altura (m)": 10.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47530555555556,
+                    -1.4405555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47530555555556,
+                    -1.4405833333333333
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": null,
+                "Estado Geral": "Morta"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47533333333334,
+                    -1.4405000000000001
+                ]
+            },
+            "properties": {
+                "Espécie": "Syzygium jambos",
+                "Família": "Moraceae",
+                "Altura (m)": 7.7,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47536111111111,
+                    -1.4405000000000001
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 8.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47536111111111,
+                    -1.4404166666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 8.3,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47533333333334,
+                    -1.4404444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": "Identificar",
+                "Altura (m)": null,
+                "Estado Geral": "Morta"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475388888888894,
+                    -1.440388888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Delonix regia",
+                "Família": "Fabaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47547222222222,
+                    -1.4401111111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47552777777778,
+                    -1.439861111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Cassia sp.",
+                "Família": "Fabaceae",
+                "Altura (m)": 5.75,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 7.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": 10.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": 5.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": 10.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": 11.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.4397777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Euterpe oleraceae",
+                "Família": "Açaíe",
+                "Altura (m)": null,
+                "Estado Geral": "Morta"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47566666666667,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 9.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47558333333333,
+                    -1.4397777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47558333333333,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47558333333333,
+                    -1.439638888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474916666666665,
+                    -1.4424444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 11.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47497222222223,
+                    -1.4423055555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 9.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475,
+                    -1.44225
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 5.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47497222222223,
+                    -1.4421944444444446
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 6.7,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47502777777778,
+                    -1.4421388888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47505555555556,
+                    -1.4419722222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 5.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47505555555556,
+                    -1.4419444444444445
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47511111111111,
+                    -1.441888888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 5.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47513888888889,
+                    -1.4417777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47513888888889,
+                    -1.44175
+                ]
+            },
+            "properties": {
+                "Espécie": "Batricus gasipaes",
+                "Família": "Açaíe",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47516666666667,
+                    -1.4416944444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 8.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47519444444445,
+                    -1.441638888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 10.8,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47522222222222,
+                    -1.4416111111111112
+                ]
+            },
+            "properties": {
+                "Espécie": "Prunus domestica",
+                "Família": "Rosaceae",
+                "Altura (m)": 13.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47522222222222,
+                    -1.4415555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Theobroma cacao",
+                "Família": "Malvaceae",
+                "Altura (m)": 5.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47525,
+                    -1.4415555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": "Identificar",
+                "Altura (m)": 8.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47525,
+                    -1.4415555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 1.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47525,
+                    -1.4411944444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 5.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47525,
+                    -1.441361111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 4.95,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47527777777778,
+                    -1.441361111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 4.8,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47530555555556,
+                    -1.4413055555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 3.1,
+                "Estado Geral": "Morta"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47580555555556,
+                    -1.4396944444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475750000000005,
+                    -1.4396944444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 2.5,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47580555555556,
+                    -1.4397222222222223
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475750000000005,
+                    -1.4397222222222223
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 2.8,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47577777777778,
+                    -1.43975
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 5.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47577777777778,
+                    -1.4397777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Annacardium occidentale",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 5.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47566666666667,
+                    -1.4401111111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": null,
+                "Altura (m)": 3.6,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47563888888889,
+                    -1.4401111111111111
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": null,
+                "Altura (m)": 3.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47563888888889,
+                    -1.4401388888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 4.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475388888888894,
+                    -1.4410555555555555
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": "Identificar",
+                "Altura (m)": 9.9,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47541666666667,
+                    -1.4409722222222223
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 4.6,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475388888888894,
+                    -1.4409444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Cocos nucifera",
+                "Família": "Açaíe",
+                "Altura (m)": 6.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47541666666667,
+                    -1.4409444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Prunus domestica",
+                "Família": "Rosaceae",
+                "Altura (m)": 8.75,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47547222222222,
+                    -1.4408333333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Identificar",
+                "Família": "Identificar",
+                "Altura (m)": 10.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47544444444445,
+                    -1.4407777777777777
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 11.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47541666666667,
+                    -1.4407777777777777
+                ]
+            },
+            "properties": {
+                "Espécie": "Tamarindus indica",
+                "Família": "Cesalpinaceae",
+                "Altura (m)": 12.0,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47547222222222,
+                    -1.44075
+                ]
+            },
+            "properties": {
+                "Espécie": "Averrhoa carambola",
+                "Família": "Oxalidaceae",
+                "Altura (m)": 3.75,
+                "Estado Geral": "Ótima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47552777777778,
+                    -1.44075
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 5.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475500000000004,
+                    -1.4406944444444445
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47547222222222,
+                    -1.4406388888888888
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 4.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47541666666667,
+                    -1.4404722222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 5.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47558333333333,
+                    -1.4404722222222222
+                ]
+            },
+            "properties": {
+                "Espécie": "Syzygium jambos",
+                "Família": "Myrtaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47580555555556,
+                    -1.4404166666666667
+                ]
+            },
+            "properties": {
+                "Espécie": "Handroanthus sp.",
+                "Família": "Bignoniaceae",
+                "Altura (m)": 6.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47555555555556,
+                    -1.440388888888889
+                ]
+            },
+            "properties": {
+                "Espécie": "Inga sp.",
+                "Família": "Fabaceae",
+                "Altura (m)": 6.5,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.4403333333333332
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 14.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475611111111114,
+                    -1.4401944444444446
+                ]
+            },
+            "properties": {
+                "Espécie": "Syzygium jambos",
+                "Família": "Myrtaceae",
+                "Altura (m)": 10.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475944444444444,
+                    -1.44125
+                ]
+            },
+            "properties": {
+                "Espécie": "Mangifera indica",
+                "Família": "Anacardiaceae",
+                "Altura (m)": 8.0,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.475,
+                    -1.4384444444444444
+                ]
+            },
+            "properties": {
+                "Espécie": "Terminalia catappa",
+                "Família": "Combretaceae",
+                "Altura (m)": 7.0,
+                "Estado Geral": "Boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47488888888889,
+                    -1.4382777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 2.5,
+                "Estado Geral": "regular"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474805555555555,
+                    -1.4380833333333334
+                ]
+            },
+            "properties": {
+                "Espécie": "Cassia sp.",
+                "Família": "Fabaceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "Péssima"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.474722222222226,
+                    -1.4380555555555556
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.5,
+                "Estado Geral": "boa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -48.47488888888889,
+                    -1.4377777777777778
+                ]
+            },
+            "properties": {
+                "Espécie": "Ficusbenjamina",
+                "Família": "Moraceae",
+                "Altura (m)": 3.0,
+                "Estado Geral": "regular"
+            }
+        }
+    ]
+}

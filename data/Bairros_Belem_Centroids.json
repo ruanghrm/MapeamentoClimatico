@@ -1,0 +1,357 @@
+[
+  {
+    "bairro": "Guamá",
+    "latitude": -1.4659569733420017,
+    "longitude": -48.46350686455704
+  },
+  {
+    "bairro": "Terra Firme",
+    "latitude": -1.4553055280149632,
+    "longitude": -48.45081543080493
+  },
+  {
+    "bairro": "Águas Lindas",
+    "latitude": -1.4101118556409162,
+    "longitude": -48.3921948786313
+  },
+  {
+    "bairro": "Curió-Utinga",
+    "latitude": -1.4323598896589715,
+    "longitude": -48.41980377674949
+  },
+  {
+    "bairro": "Ariramba",
+    "latitude": -1.1212443582432037,
+    "longitude": -48.42501758370538
+  },
+  {
+    "bairro": "São Francisco",
+    "latitude": -1.1080948582301355,
+    "longitude": -48.41710526429106
+  },
+  {
+    "bairro": "Carananduba",
+    "latitude": -1.0957919345416345,
+    "longitude": -48.4055240958562
+  },
+  {
+    "bairro": "Marahu",
+    "latitude": -1.0780805361661152,
+    "longitude": -48.40609071803322
+  },
+  {
+    "bairro": "Guanabara",
+    "latitude": -1.4017971398224942,
+    "longitude": -48.41308139731274
+  },
+  {
+    "bairro": "Castanheira",
+    "latitude": -1.4061502667289816,
+    "longitude": -48.43250522443292
+  },
+  {
+    "bairro": "Una",
+    "latitude": -1.3717742448541392,
+    "longitude": -48.4260022618514
+  },
+  {
+    "bairro": "Águas Negras",
+    "latitude": -1.3027956499317364,
+    "longitude": -48.44343812005879
+  },
+  {
+    "bairro": "Tapanã",
+    "latitude": -1.3400259088396473,
+    "longitude": -48.470580379804886
+  },
+  {
+    "bairro": "Paracuri",
+    "latitude": -1.3158906900235605,
+    "longitude": -48.47711189143036
+  },
+  {
+    "bairro": "Parque Guajará",
+    "latitude": -1.3236223198395658,
+    "longitude": -48.45905785201515
+  },
+  {
+    "bairro": "Tenoné",
+    "latitude": -1.3173147334576583,
+    "longitude": -48.43780451526575
+  },
+  {
+    "bairro": "Coqueiro",
+    "latitude": -1.3446696745519868,
+    "longitude": -48.43987818432479
+  },
+  {
+    "bairro": "São Clemente",
+    "latitude": -1.3652414941274886,
+    "longitude": -48.463317262942894
+  },
+  {
+    "bairro": "Val-de-Cans",
+    "latitude": -1.3867952514618156,
+    "longitude": -48.475093070033765
+  },
+  {
+    "bairro": "Bengui",
+    "latitude": -1.3752519081144723,
+    "longitude": -48.457118854549066
+  },
+  {
+    "bairro": "Marambaia",
+    "latitude": -1.401745639326642,
+    "longitude": -48.451242876323526
+  },
+  {
+    "bairro": "Souza",
+    "latitude": -1.4159078125035303,
+    "longitude": -48.45253734499675
+  },
+  {
+    "bairro": "Sacramenta",
+    "latitude": -1.4140180897155963,
+    "longitude": -48.4749973008896
+  },
+  {
+    "bairro": "Campina",
+    "latitude": -1.4524660276536976,
+    "longitude": -48.4982385748617
+  },
+  {
+    "bairro": "Batista Campos",
+    "latitude": -1.4608943466347561,
+    "longitude": -48.48985244617936
+  },
+  {
+    "bairro": "Jurunas",
+    "latitude": -1.4704061656459462,
+    "longitude": -48.493447491921636
+  },
+  {
+    "bairro": "Nazaré",
+    "latitude": -1.4522111170573633,
+    "longitude": -48.484399241310356
+  },
+  {
+    "bairro": "Cremação",
+    "latitude": -1.461305009658736,
+    "longitude": -48.47808289237507
+  },
+  {
+    "bairro": "São Brás",
+    "latitude": -1.4510477793756944,
+    "longitude": -48.4713117482081
+  },
+  {
+    "bairro": "Fátima",
+    "latitude": -1.4424190124946605,
+    "longitude": -48.4727799053758
+  },
+  {
+    "bairro": "Umarizal",
+    "latitude": -1.4399187889346967,
+    "longitude": -48.485166411991315
+  },
+  {
+    "bairro": "Pedreira",
+    "latitude": -1.425903312775297,
+    "longitude": -48.470571815781675
+  },
+  {
+    "bairro": "Telégrafo",
+    "latitude": -1.4260147316247145,
+    "longitude": -48.48661853975458
+  },
+  {
+    "bairro": "Universitário",
+    "latitude": -1.46264785568244,
+    "longitude": -48.44214585595047
+  },
+  {
+    "bairro": "Barreiro",
+    "latitude": -1.4138565941810959,
+    "longitude": -48.48558306242495
+  },
+  {
+    "bairro": "Parque Verde",
+    "latitude": -1.3626223019317847,
+    "longitude": -48.44918188140842
+  },
+  {
+    "bairro": "Cruzeiro",
+    "latitude": -1.2971978981933323,
+    "longitude": -48.48366114354033
+  },
+  {
+    "bairro": "Ponta Grossa",
+    "latitude": -1.3067540227559262,
+    "longitude": -48.483535507026204
+  },
+  {
+    "bairro": "Mangueiras",
+    "latitude": -1.1545548439753903,
+    "longitude": -48.45692415479723
+  },
+  {
+    "bairro": "Maracajá",
+    "latitude": -1.1720298328813261,
+    "longitude": -48.45524003070502
+  },
+  {
+    "bairro": "Chapéu Virado",
+    "latitude": -1.1365963874425808,
+    "longitude": -48.453188245224034
+  },
+  {
+    "bairro": "Farol",
+    "latitude": -1.1376181375555112,
+    "longitude": -48.463312704497994
+  },
+  {
+    "bairro": "Porto Arthur",
+    "latitude": -1.127418056623097,
+    "longitude": -48.449264911384304
+  },
+  {
+    "bairro": "Caruara",
+    "latitude": -1.0834755077920992,
+    "longitude": -48.39473515141938
+  },
+  {
+    "bairro": "Baía do Sol",
+    "latitude": -1.0695162317315898,
+    "longitude": -48.35149232879941
+  },
+  {
+    "bairro": "Sucurijuquara",
+    "latitude": -1.0898461834746547,
+    "longitude": -48.380318959305924
+  },
+  {
+    "bairro": "Bonfim",
+    "latitude": -1.1148034923495596,
+    "longitude": -48.39984986129645
+  },
+  {
+    "bairro": "Paraíso",
+    "latitude": -1.0715552176322813,
+    "longitude": -48.380792674868026
+  },
+  {
+    "bairro": "Reduto",
+    "latitude": -1.4461944494606043,
+    "longitude": -48.49259949748368
+  },
+  {
+    "bairro": "Canudos",
+    "latitude": -1.451805460965519,
+    "longitude": -48.46052458114374
+  },
+  {
+    "bairro": "Marco",
+    "latitude": -1.4368265506091984,
+    "longitude": -48.45936553448351
+  },
+  {
+    "bairro": "Cabanagem",
+    "latitude": -1.3682975635093464,
+    "longitude": -48.43429690570423
+  },
+  {
+    "bairro": "Miramar",
+    "latitude": -1.4079451759703587,
+    "longitude": -48.489662469778935
+  },
+  {
+    "bairro": "Maracangalha",
+    "latitude": -1.4020946368150844,
+    "longitude": -48.47971416401508
+  },
+  {
+    "bairro": "Mangueirão",
+    "latitude": -1.3862320570839524,
+    "longitude": -48.44512906170935
+  },
+  {
+    "bairro": "Aurá",
+    "latitude": -1.4243810511042267,
+    "longitude": -48.38466454001354
+  },
+  {
+    "bairro": "Murubira",
+    "latitude": -1.126312060292309,
+    "longitude": -48.439108152498676
+  },
+  {
+    "bairro": "Praia Grande",
+    "latitude": -1.147619750406408,
+    "longitude": -48.465989267140365
+  },
+  {
+    "bairro": "Pratinha",
+    "latitude": -1.3647363177201073,
+    "longitude": -48.476352080736554
+  },
+  {
+    "bairro": "Condor",
+    "latitude": -1.472326078882552,
+    "longitude": -48.478821103878126
+  },
+  {
+    "bairro": "São João do Outeiro",
+    "latitude": -1.2675728363607615,
+    "longitude": -48.46393518037525
+  },
+  {
+    "bairro": "Itaiteua",
+    "latitude": -1.2689723867364915,
+    "longitude": -48.44565279297403
+  },
+  {
+    "bairro": "Água Boa",
+    "latitude": -1.255641391591227,
+    "longitude": -48.45487482822209
+  },
+  {
+    "bairro": "Brasília",
+    "latitude": -1.2805588206264369,
+    "longitude": -48.476985104493735
+  },
+  {
+    "bairro": "Maracacuera",
+    "latitude": -1.2894221579420346,
+    "longitude": -48.45031222775726
+  },
+  {
+    "bairro": "Campina de Icoaraci",
+    "latitude": -1.2945611344824643,
+    "longitude": -48.46972407296151
+  },
+  {
+    "bairro": "Aeroporto",
+    "latitude": -1.1413720289637481,
+    "longitude": -48.45511000031252
+  },
+  {
+    "bairro": "Cidade Velha",
+    "latitude": -1.4618952893789636,
+    "longitude": -48.502978138118195
+  },
+  {
+    "bairro": "Natal do Murubira",
+    "latitude": -1.133393557850218,
+    "longitude": -48.44641583367791
+  },
+  {
+    "bairro": "Agulha",
+    "latitude": -1.3051064651255893,
+    "longitude": -48.47150752439027
+  },
+  {
+    "bairro": "Vila",
+    "latitude": -1.1628128974551761,
+    "longitude": -48.469708740587926
+  }
+]
