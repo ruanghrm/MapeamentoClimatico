@@ -1,4 +1,4 @@
-const map = L.map('map').setView([-1.4558, -48.4902], 12);
+const map = L.map('map').setView([-1.3650, -48.4500], 12);
 let selectedLayer = null;
 let selectedYearButton = null;
 let selectedTransportIcon = null;
@@ -35,7 +35,10 @@ function loadCentroidsData() {
         });
 }
 
-function loadWeatherData(lat = -1.4558, lon = -48.4902) {
+let lastLat = -1.4558;
+let lastLon = -48.4902;
+
+function loadWeatherData(lat = lastLat, lon = lastLon) {
     document.getElementById('temperatura').innerHTML = `<i class="fas fa-thermometer-half"></i> Carregando temperatura...`;
     document.getElementById('precipitacao').innerHTML = `<i class="fas fa-cloud-showers-heavy"></i> Carregando precipitação...`;
     document.getElementById('sensacao_termica').innerHTML = `<i class="fas fa-temperature-high"></i> Carregando sensação térmica...`;
@@ -93,14 +96,21 @@ function loadWeatherData(lat = -1.4558, lon = -48.4902) {
         });
 }
 
+function updateLocation(lat, lon) {
+    lastLat = lat;
+    lastLon = lon;
+    loadWeatherData(lat, lon);
+}
+
 window.onload = () => {
     loadWeatherData();
     loadCentroidsData();
     setInterval(loadWeatherData, 30000);
 };
 
-
+let arborizacaoCluster;
 let arborizacaoLayers = [];
+const zoomThreshold = 16;
 
 function loadTreeIcons() {
     const treeFiles = [
@@ -110,43 +120,65 @@ function loadTreeIcons() {
         'data/nazareArv.geojson'
     ];
 
+    if (arborizacaoCluster) {
+        map.removeLayer(arborizacaoCluster);
+    }
+    arborizacaoCluster = L.markerClusterGroup({
+        iconCreateFunction: function(cluster) {
+            const count = cluster.getChildCount();
+            return L.divIcon({
+                html: `<div style="position: relative;">
+                           <i class="fas fa-tree" style="color: green; font-size: 24px;"></i>
+                           <span style="position: absolute; top: -5px; left: 18px; color: black; font-weight: bold;">
+                               ${count}
+                           </span>
+                       </div>`,
+                className: 'tree-cluster-icon',
+                iconSize: [30, 30]
+            });
+        }
+    });
+
     Promise.all(treeFiles.map(file => fetch(file).then(response => {
         if (!response.ok) throw new Error(`Erro ao carregar o arquivo GeoJSON: ${file}`);
         return response.json();
     })))
     .then(datasets => {
         arborizacaoLayers.forEach(layer => map.removeLayer(layer));
-        arborizacaoLayers = []; 
+        arborizacaoLayers = [];
 
         datasets.forEach(data => {
             const layer = L.geoJson(data, {
-                pointToLayer: function (feature, latlng) {
-                    if (map.getZoom() >= 13) {
-                        const marker = L.marker(latlng, { icon: treeIcon });
+                pointToLayer: function(feature, latlng) {
+                    const marker = L.marker(latlng, { icon: treeIcon });
 
-                        marker.on('mouseover', function() {
-                            this.setIcon(L.icon({
-                                iconUrl: 'data/tree_highlighted.png',
-                                iconSize: [20, 20],
-                                iconAnchor: [10, 10]
-                            }));
-                        });
+                    marker.on('mouseover', function() {
+                        this.setIcon(L.icon({
+                            iconUrl: 'data/tree_highlighted.png',
+                            iconSize: [20, 20],
+                            iconAnchor: [10, 10]
+                        }));
+                    });
 
-                        marker.on('mouseout', function() {
-                            this.setIcon(treeIcon);
-                        });
+                    marker.on('mouseout', function() {
+                        this.setIcon(treeIcon);
+                    });
 
-                        return marker;
-                    }
-                    return null;
+                    return marker;
                 }
             });
-            arborizacaoLayers.push(layer);
 
-            if (document.getElementById('toggle-arborizacao').checked) {
-                layer.addTo(map);
-            }
+            arborizacaoLayers.push(layer);
+            arborizacaoCluster.addLayer(layer); 
         });
+
+        if (document.getElementById('toggle-arborizacao').checked) {
+            if (map.getZoom() < zoomThreshold) {
+                map.addLayer(arborizacaoCluster);
+            } else {
+                arborizacaoLayers.forEach(layer => layer.addTo(map));
+            }
+        }
     })
     .catch(error => console.error('Erro ao carregar os arquivos GeoJSON:', error));
 }
@@ -156,18 +188,27 @@ function toggleArborizacaoLayer() {
     if (switchButton.checked) {
         loadTreeIcons();
     } else {
+        if (arborizacaoCluster) {
+            map.removeLayer(arborizacaoCluster);
+        }
         arborizacaoLayers.forEach(layer => map.removeLayer(layer));
     }
 }
 
 map.on('zoomend', function() {
     if (document.getElementById('toggle-arborizacao').checked) {
-        arborizacaoLayers.forEach(layer => map.removeLayer(layer));
-        loadTreeIcons();
+        if (map.getZoom() < zoomThreshold) {
+            arborizacaoLayers.forEach(layer => map.removeLayer(layer));
+            map.addLayer(arborizacaoCluster);
+        } else {
+            map.removeLayer(arborizacaoCluster);
+            arborizacaoLayers.forEach(layer => layer.addTo(map));
+        }
     }
 });
 
 document.getElementById('toggle-arborizacao').addEventListener('change', toggleArborizacaoLayer);
+
 
 function style(feature) {
     return {
@@ -207,6 +248,11 @@ function resetHighlight(e) {
 }
 
 function onFeatureClick(e) {
+    const lat = e.latlng.lat;
+    const lon = e.latlng.lng;
+
+    loadWeatherData(lat, lon);
+
     if (selectedLayer) {
         geoJsonLayer.resetStyle(selectedLayer);
     }
@@ -217,19 +263,7 @@ function onFeatureClick(e) {
         color: "#FF6600",
         fillOpacity: 0.4
     });
-
-    openInfoPanel(e.target.feature.properties);
-
-    const bairroNome = selectedLayer.feature.properties.BAIRRO;
-    const centroide = getCentroideByBairroNome(bairroNome);
-
-    if (centroide) {
-        loadWeatherData(centroide.lat, centroide.lon);
-    } else {
-        console.log(`Centroide não encontrado para o bairro ${bairroNome}`);
-    }
 }
-
 
 function getCentroideByBairroNome(bairroNome) {
     if (!centroidsData) return null;
@@ -250,7 +284,6 @@ function getCentroideByBairroNome(bairroNome) {
 
     return null;
 }
-
 
 let geoJsonLayer;
 
@@ -334,6 +367,171 @@ function toggleVegetacaoLayer() {
 
 document.getElementById('toggle-vegetacao').addEventListener('change', toggleVegetacaoLayer);
 
+let riscoLayer;
+
+function loadRiscoLayer() {
+    fetch('data/PA_BELEM_SR_CPRM.geojson')
+        .then(response => {
+            if (!response.ok) throw new Error('Erro ao carregar o arquivo GeoJSON de risco');
+            return response.json();
+        })
+        .then(data => {
+            if (riscoLayer) {
+                map.removeLayer(riscoLayer);
+            }
+
+            function getColor(grauRisco) {
+                if (grauRisco === 'Muito Alto') {
+                    return "rgb(255, 0, 0)";
+                } else if (grauRisco === 'Alto') {
+                    return "rgb(255, 165, 0)";
+                } else {
+                    return "rgb(255, 255, 255)";
+                }
+            }
+
+            riscoLayer = L.geoJson(data, {
+                style: function (feature) {
+                    const grauRisco = feature.properties.GRAU_RISCO; 
+                    return {
+                        color: "#000000",
+                        weight: 0.5,
+                        opacity: 0.4,
+                        fillOpacity: 0.7,
+                        fillColor: getColor(grauRisco) 
+                    };
+                },
+                onEachFeature: function (feature, layer) {
+                    layer.on('mouseover', function (e) {
+                        const { LOCAL, SITUACAO, DESCRICAO } = feature.properties;
+                        const popupContent = `
+                            <div>
+                                <strong>Local:</strong> ${LOCAL || 'Desconhecido'}<br>
+                                <strong>Situação:</strong> ${SITUACAO || 'Desconhecido'}<br>
+                                <strong>Descrição:</strong> ${DESCRICAO || 'Desconhecido'}
+                            </div>
+                        `;
+                        const popup = L.popup()
+                            .setLatLng(e.latlng)
+                            .setContent(popupContent)
+                            .openOn(map);
+                    });
+
+                    layer.on('mouseout', function () {
+                        map.closePopup();
+                    });
+                }
+            });
+
+            riscoLayer.addTo(map);
+        })
+        .catch(error => console.error("Erro ao carregar o arquivo GeoJSON de risco:", error));
+}
+
+function toggleRiscoLayer() {
+    const switchButton = document.getElementById('toggle-risco');
+    console.log("Toggle ativado:", switchButton.checked);
+    if (switchButton.checked) {
+        loadRiscoLayer();
+    } else if (riscoLayer) {
+        map.removeLayer(riscoLayer);
+    }
+}
+
+document.getElementById('toggle-risco').addEventListener('change', toggleRiscoLayer);
+
+let queimadasLayer;
+
+function loadQueimadasLayer() {
+    fetch('data/queimadas2024.geojson')
+        .then(response => {
+            if (!response.ok) throw new Error('Erro ao carregar o arquivo GeoJSON de queimadas');
+            return response.json();
+        })
+        .then(data => {
+            if (queimadasLayer) {
+                map.removeLayer(queimadasLayer);
+            }
+
+            const markers = L.markerClusterGroup({
+                iconCreateFunction: function (cluster) {
+                    const count = cluster.getChildCount();
+                    let fireColor;
+
+                    if (count > 100) {
+                        fireColor = 'rgb(255, 0, 0)';
+                    } else if (count > 50) {
+                        fireColor = 'rgb(255, 69, 0)';
+                    } else {
+                        fireColor = 'rgb(255, 140, 0)';
+                    }
+
+                    return L.divIcon({
+                        html: `<div style="position: relative;">
+                                  <i class="fas fa-fire" style="color: ${fireColor}; font-size: 24px;"></i>
+                                  <span style="position: absolute; top: -5px; left: 18px; color: black; font-weight: bold;">
+                                      ${count}
+                                  </span>
+                               </div>`,
+                        className: 'fire-cluster-icon',
+                        iconSize: [30, 30]
+                    });
+                }
+            });
+
+            const fireIcon = L.divIcon({
+                html: '<i class="fas fa-fire" style="color: orange; font-size: 16px;"></i>',
+                className: 'fire-icon',
+                iconSize: [16, 16],
+                iconAnchor: [8, 8]
+            });
+
+            data.features.forEach(feature => {
+                const latlng = [
+                    feature.geometry.coordinates[1],
+                    feature.geometry.coordinates[0]
+                ];
+                const marker = L.marker(latlng, { icon: fireIcon });
+
+                marker.on('mouseover', function (e) {
+                    const { DataHora, Municipio, DiaSemChuva } = feature.properties;
+                    const popupContent = `
+                        <div>
+                            <strong>Data e Hora:</strong> ${DataHora || 'Desconhecido'}<br>
+                            <strong>Município:</strong> ${Municipio || 'Desconhecido'}<br>
+                            <strong>Dias Sem Chuva:</strong> ${DiaSemChuva || 'Desconhecido'}
+                        </div>
+                    `;
+                    const popup = L.popup()
+                        .setLatLng(e.latlng)
+                        .setContent(popupContent)
+                        .openOn(map);
+                });
+
+                marker.on('mouseout', function () {
+                    map.closePopup();
+                });
+
+                markers.addLayer(marker);
+            });
+
+            queimadasLayer = markers;
+            map.addLayer(queimadasLayer);
+        })
+        .catch(error => console.error("Erro ao carregar o arquivo GeoJSON de queimadas:", error));
+}
+
+function toggleQueimadasLayer() {
+    const switchButton = document.getElementById('toggle-queimadas');
+    if (switchButton.checked) {
+        loadQueimadasLayer();
+    } else if (queimadasLayer) {
+        map.removeLayer(queimadasLayer);
+    }
+}
+
+document.getElementById('toggle-queimadas').addEventListener('change', toggleQueimadasLayer);
+
 
 function switchGeoJsonLayer(layerName) {
     const layerUrls = {
@@ -370,7 +568,27 @@ function openInfoPanel(properties) {
 
     infoPanel.classList.add("show");
     infoPanel.classList.remove("hide");
+
+    const closeButton = document.getElementById("close-info-panel");
+    closeButton.addEventListener("click", closeInfoPanel);
 }
+
+function handleToggleGases() {
+    const toggleGases = document.getElementById("toggle-gases");
+
+    if (toggleGases.checked) {
+        const lat = map.getCenter().lat;
+        const lon = map.getCenter().lng;
+
+        loadWeatherData(lat, lon);
+
+        openInfoPanel({ ID: "informacoes", nome: "Informações gerais" });
+    }
+}
+
+document.getElementById("toggle-gases").addEventListener("change", handleToggleGases);
+
+document.getElementById("toggle-gases").addEventListener("change", handleToggleGases);
 
 function fetchBuildingData(tipoAnalise) {
     const buildingDataUrl = `http://127.0.0.1:8000/gerar_grafico/${tipoAnalise}`;
@@ -400,6 +618,9 @@ function closeInfoPopup() {
     const infoPanel = document.getElementById("info-panel");
     infoPanel.classList.add("hide");
 
+    const toggleGases = document.getElementById("toggle-gases");
+    toggleGases.checked = false;
+
     if (selectedTransportIcon) {
         selectedTransportIcon.classList.remove('selected');
         selectedTransportIcon = null; 
@@ -425,6 +646,7 @@ function closeInfoPopup() {
         selectedLayer = null;
     }
 }
+
 
 function updateDashboard(infoContent, bairroId) {
     const selectedYear = selectedYearButton ? selectedYearButton.textContent : null;
@@ -454,6 +676,24 @@ function updateDashboard(infoContent, bairroId) {
         console.warn('Ano ou transporte não selecionados, ou ID do bairro é nulo.');
     }
 }
+
+document.getElementById('toggle-vegetacao').addEventListener('change', function () {
+    const legend = document.getElementById('legend-popup');
+    if (this.checked) {
+        legend.style.display = 'block';
+    } else {
+        legend.style.display = 'none';
+    }
+});
+
+document.getElementById('toggle-risco').addEventListener('change', function () {
+    const legend2 = document.getElementById('legend-popup2');
+    if (this.checked) {
+        legend2.style.display = 'block';
+    } else {
+        legend2.style.display = 'none';
+    }
+});
 
 document.querySelectorAll('#year-selection button').forEach(button => {
     button.addEventListener('click', function () {

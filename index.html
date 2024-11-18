@@ -6,49 +6,73 @@
     <title>Mapa Interativo - Belém</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.1/proj4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-proj4/1.0.0/leaflet-proj4.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-mobile.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <div id="map"></div>
-
     <div id="toggle-container">
         <label class="switch">
             <input type="checkbox" id="toggle-layer">
             <span class="slider"></span>
         </label>
-    
+        <label class="switch">
+            <input type="checkbox" id="toggle-risco">
+            <span class="slider"></span>
+        </label>
+        <label class="switch">
+            <input type="checkbox" id="toggle-queimadas">
+            <span class="slider"></span>
+        </label>
         <label class="switch">
             <input type="checkbox" id="toggle-arborizacao">
             <span class="slider"></span>
         </label>
-    
         <label class="switch">
             <input type="checkbox" id="toggle-vegetacao">
             <span class="slider"></span>
         </label>
+        <label class="switch">
+            <input type="checkbox" id="toggle-gases">
+            <span class="slider"></span>
+        </label>
     </div>    
+    <div id="legend-popup" class="legend" style="display: none;">
+        <h2>Classes de Vegetação</h2>
+        <ul>
+            <li><span class="legend-color" style="background-color: rgb(0, 100, 0);"></span> Vegetação Densa</li>
+            <li><span class="legend-color" style="background-color: rgb(102, 205, 102);"></span> Vegetação Moderada</li>
+            <li><span class="legend-color" style="background-color: rgb(204, 255, 204);"></span> Vegetação Baixa</li>
+        </ul>
+    </div>
+    <div id="legend-popup2" class="legend2" style="display: none;">
+        <h2>Áreas de Risco</h2>
+        <ul>
+            <li><span class="legend-color2" style="background-color: rgb(255, 0, 0);"></span> Risco Muito Alto</li>
+            <li><span class="legend-color2" style="background-color: rgb(255, 165, 0);"></span> Risco Alto</li>
+        </ul>
+    </div>
     
-
+    <div id="logo">
+        <img src="/data/logo.png" alt="Logo">
+    </div>
     <h1>Previsão do Tempo para Belém</h1>
-    
     <div id="weather-data">
         <p id="temperatura"><i class="fas fa-thermometer-half"></i> Carregando temperatura...</p>
         <p id="sensacao_termica"><i class="fas fa-temperature-high"></i> Carregando sensação térmica...</p>
         <p id="precipitacao"><i class="fas fa-cloud-showers-heavy"></i> Carregando precipitação...</p>
     </div>
-
     <div id="info-panel" class="hide">
         <div id="close-panel" onclick="closeInfoPopup()">
             <i class="fas fa-times"></i>
         </div>
-        
         <h2>Mapa de Qualidade do Ar - Belém do Pará</h2>
-
         <div id="year-selection">
             <button onclick="selectYear(2020)">2020</button>
             <button onclick="selectYear(2021)">2021</button>
