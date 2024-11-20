@@ -527,7 +527,7 @@ function loadQueimadasLayer(map) {
 
             const fireIcon = {
                 url: 'data/fire.png',
-                scaledSize: new google.maps.Size(20, 20),
+                scaledSize: new google.maps.Size(21, 21),
                 anchor: new google.maps.Point(10, 10)
             };
 
