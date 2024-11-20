@@ -588,8 +588,6 @@ function handleToggleGases() {
 
 document.getElementById("toggle-gases").addEventListener("change", handleToggleGases);
 
-document.getElementById("toggle-gases").addEventListener("change", handleToggleGases);
-
 function fetchBuildingData(tipoAnalise) {
     const buildingDataUrl = `http://127.0.0.1:8000/gerar_grafico/${tipoAnalise}`;
 
