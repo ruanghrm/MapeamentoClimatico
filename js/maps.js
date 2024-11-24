@@ -628,34 +628,42 @@ let lastActivatedLayer = null;
 
 function handleToggleActivation(event) {
     const toggle = event.target;
-    const layerId = toggle.id;
 
-    if (riscoLayer && riscoLayer.setZIndex) riscoLayer.setZIndex(1); 
-    if (arborizacaoLayers && arborizacaoLayers.setZIndex) arborizacaoLayers.setZIndex(999);
-    if (queimadasLayer && queimadasLayer.setZIndex) queimadasLayer.setZIndex(999); 
-    if (bairrosLayer && bairrosLayer.setZIndex) bairrosLayer.setZIndex(999);
-    if (municipiosLayer && municipiosLayer.setZIndex) municipiosLayer.setZIndex(999); 
-    if (vegetacaoLayer && vegetacaoLayer.setZIndex) vegetacaoLayer.setZIndex(1);
+    if (bairrosLayer && bairrosLayer.setZIndex) bairrosLayer.setZIndex(10);
+    if (municipiosLayer && municipiosLayer.setZIndex) municipiosLayer.setZIndex(20);
+    if (vegetacaoLayer && vegetacaoLayer.setZIndex) vegetacaoLayer.setZIndex(30);
+    if (riscoLayer && riscoLayer.setZIndex) riscoLayer.setZIndex(40);
+    if (arborizacaoLayers && arborizacaoLayers.length > 0) {
+        arborizacaoLayers.forEach(layer => layer.setZIndex(50));
+    }
+    if (queimadasLayer && queimadasLayer.setZIndex) queimadasLayer.setZIndex(60);
 
-    switch (layerId) {
+    switch (toggle.id) {
         case 'toggle-risco':
-            if (riscoLayer && riscoLayer.setZIndex) riscoLayer.setZIndex(10000);
+            if (riscoLayer && riscoLayer.setZIndex) riscoLayer.setZIndex(100);
             break;
         case 'toggle-arborizacao':
-        case 'toggle-queimadas': 
-            if (arborizacaoLayers && arborizacaoLayers.setZIndex) arborizacaoLayers.setZIndex(9999);
-            if (queimadasLayer && queimadasLayer.setZIndex) queimadasLayer.setZIndex(9999);
+            if (arborizacaoLayers && arborizacaoLayers.length > 0) {
+                arborizacaoLayers.forEach(layer => layer.setZIndex(90));
+            }
             break;
-        case 'toggle-bairros':
-        case 'toggle-municipios':
-            if (bairrosLayer && bairrosLayer.setZIndex) bairrosLayer.setZIndex(999);
-            if (municipiosLayer && municipiosLayer.setZIndex) municipiosLayer.setZIndex(999);
+        case 'toggle-queimadas':
+            if (queimadasLayer && queimadasLayer.setZIndex) queimadasLayer.setZIndex(80);
             break;
         case 'toggle-vegetacao':
-            if (vegetacaoLayer && vegetacaoLayer.setZIndex) vegetacaoLayer.setZIndex(1);
+            if (vegetacaoLayer && vegetacaoLayer.setZIndex) vegetacaoLayer.setZIndex(70);
             break;
+        case 'toggle-municipios':
+            if (municipiosLayer && municipiosLayer.setZIndex) municipiosLayer.setZIndex(60);
+            break;
+        case 'toggle-bairros':
+            if (bairrosLayer && bairrosLayer.setZIndex) bairrosLayer.setZIndex(50);
+            break;
+        default:
+            console.warn('Toggle desconhecido:', toggle.id);
     }
 }
+
 
 
 function openInfoPanel(properties) {
