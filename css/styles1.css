@@ -531,3 +531,27 @@ input:checked + .slider-bairros:before {
     height: 18px !important;
     font-size: 14px !important;
 }
+
+.layer-bairros {
+    z-index: 50; 
+}
+
+.layer-municipios {
+    z-index: 60;
+}
+
+.layer-vegetacao {
+    z-index: 1;
+}
+
+.layer-risco {
+    z-index: 1000; 
+}
+
+.layer-arborizacao {
+    z-index: 90;
+}
+
+.layer-queimadas {
+    z-index: 80;
+}
