@@ -7,7 +7,7 @@ Este projeto visa criar um mapa interativo que mostra a qualidade do ar em difer
 - HTML
 - CSS
 - JavaScript
-- Leaflet
+- Google Maps
 - GeoJSON
 
 ## Contribuição
