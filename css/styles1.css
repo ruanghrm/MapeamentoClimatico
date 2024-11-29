@@ -555,3 +555,78 @@ input:checked + .slider-bairros:before {
 .layer-queimadas {
     z-index: 80;
 }
+
+@media (max-width: 1200px) {
+    #map {
+        height: 80%;
+        width: 90%;
+    }
+    #info-panel {
+        width: 25%;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+    #info-panel p {
+        font-size: 1.1rem;
+    }
+    #year-selection button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    .chart-container {
+        height: 150px;
+    }
+    #dashboard-frame {
+        height: 250px;
+    }
+}
+
+@media (max-width: 800px) {
+    #map {
+        height: 70%;
+        width: 85%;
+    }
+    #info-panel {
+        width: 40%;
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+    #info-panel p {
+        font-size: 1rem;
+    }
+    #year-selection button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+    .chart-container {
+        height: 120px;
+    }
+    #dashboard-frame {
+        height: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    #map {
+        height: 60%;
+        width: 100%;
+    }
+    #info-panel {
+        width: 50%;
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+    #info-panel p {
+        font-size: 0.9rem;
+    }
+    #year-selection button {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+    .chart-container {
+        height: 100px;
+    }
+    #dashboard-frame {
+        height: 150px;
+    }
+}
