@@ -424,7 +424,7 @@ input:checked + .slider-bairros:before {
 
 .legend {
     position: fixed;
-    bottom: 110px;
+    bottom: 160px;
     left: 10px;
     background-color: white;
     padding: 15px;
