@@ -42,17 +42,25 @@ function loadWeatherData(lat = lastLat, lon = lastLon) {
     document.getElementById('temperatura').innerHTML = `<i class="fas fa-thermometer-half"></i> Carregando temperatura...`;
     document.getElementById('precipitacao').innerHTML = `<i class="fas fa-cloud-showers-heavy"></i> Carregando precipitação...`;
     document.getElementById('sensacao_termica').innerHTML = `<i class="fas fa-temperature-high"></i> Carregando sensação térmica...`;
+    document.getElementById('umidade').innerHTML = `<i class="fas fa-tint"></i> Carregando umidade...`;
+    document.getElementById('vento').innerHTML = `<i class="fas fa-wind"></i> Carregando velocidade do vento...`;
 
-    const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=precipitation,temperature_2m,wind_speed_10m`;
+    const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=temperature_2m,precipitation,wind_speed_10m,relative_humidity_2m&timezone=America/Sao_Paulo`;
 
     fetch(apiUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro ao fazer a requisição: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
-            console.log(data);
+            console.log("Dados retornados:", data);
 
             const temperature = data.current_weather ? data.current_weather.temperature : null;
             const precipitation = data.hourly && data.hourly.precipitation ? data.hourly.precipitation[0] : 0;
             const windSpeed = data.current_weather ? data.current_weather.windspeed : null;
+            const humidity = data.hourly && data.hourly.relative_humidity_2m ? data.hourly.relative_humidity_2m[0] : null;
 
             let feelsLike = data.current_weather && data.current_weather.apparent_temperature !== undefined
                               ? data.current_weather.apparent_temperature
@@ -86,13 +94,31 @@ function loadWeatherData(lat = lastLat, lon = lastLon) {
                 sensacaoTermicaElement.innerHTML = `<i class="fas fa-temperature-high"></i> Sensação Térmica: ${feelsLike.toFixed(1)}°C`;
             }
 
-            console.log(`Atualização: Temperatura = ${temperature}°C, Precipitação = ${precipitation}mm, Sensação Térmica = ${feelsLike}°C`);
+            if (humidity === null || humidity === undefined) {
+                console.error("Erro: Umidade não encontrada.");
+                document.getElementById('umidade').textContent = "Erro ao carregar a umidade.";
+            } else {
+                const umidadeElement = document.getElementById('umidade');
+                umidadeElement.innerHTML = `<i class="fas fa-tint"></i> Umidade: ${humidity}%`;
+            }
+
+            if (windSpeed === null || windSpeed === undefined) {
+                console.error("Erro: Velocidade do vento não encontrada.");
+                document.getElementById('vento').textContent = "Erro ao carregar a velocidade do vento.";
+            } else {
+                const ventoElement = document.getElementById('vento');
+                ventoElement.innerHTML = `<i class="fas fa-wind"></i> Vento: ${windSpeed} km/h`;
+            }
+
+            console.log(`Atualização: Temperatura = ${temperature}°C, Precipitação = ${precipitation}mm, Sensação Térmica = ${feelsLike}°C, Umidade = ${humidity}%, Vento = ${windSpeed} km/h`);
         })
         .catch(error => {
             console.error("Erro ao carregar os dados meteorológicos:", error);
             document.getElementById('temperatura').textContent = "Erro ao carregar a temperatura.";
             document.getElementById('precipitacao').textContent = "Erro ao carregar a precipitação.";
             document.getElementById('sensacao_termica').textContent = "Erro ao carregar a sensação térmica.";
+            document.getElementById('umidade').textContent = "Erro ao carregar a umidade.";
+            document.getElementById('vento').textContent = "Erro ao carregar a velocidade do vento.";
         });
 }
 
@@ -104,9 +130,10 @@ function updateLocation(lat, lon) {
 
 window.onload = () => {
     loadWeatherData();
-    loadCentroidsData();
-    setInterval(loadWeatherData, 30000);
+    loadCentroidsData();  
+    setInterval(loadWeatherData, 60000); 
 };
+
 
 let arborizacaoCluster;
 let arborizacaoLayers = [];
@@ -536,7 +563,7 @@ document.getElementById('toggle-queimadas').addEventListener('change', toggleQue
 function switchGeoJsonLayer(layerName) {
     const layerUrls = {
         bairros: 'data/Bairros_Belem.geojson',
-        municipios: 'data/municipios.geojson'
+        municipios: 'data/MARITUBA_GEOJSON.geojson'
     };
 
     const url = layerUrls[layerName];

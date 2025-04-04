@@ -64,13 +64,35 @@ h1 {
 #temperatura {
     font-size: 2rem;
     font-weight: bold;
-    color: #ff6f61; 
+    color: #ff6f61; /* Cor para a temperatura */
 }
 
 #precipitacao {
     font-size: 1.5rem;
-    color: #2e8b57; 
+    color: #2e8b57; /* Cor para precipitação */
 }
+
+#sensacao_termica {
+    font-size: 1.5rem;
+    color: #ff8c00; /* Cor para sensação térmica */
+}
+
+/* Novos estilos */
+#umidade {
+    font-size: 1.5rem;
+    color: #1e90ff; /* Cor para umidade */
+}
+
+#vento {
+    font-size: 1.5rem;
+    color: #20b2aa; /* Cor para velocidade do vento */
+}
+
+#radiacao {
+    font-size: 1.5rem;
+    color: #ffd700; /* Cor para radiação solar */
+}
+
 
 .chart-container {
     width: 100%;
@@ -216,7 +238,7 @@ h1 {
 
 .slider:before {
     position: absolute;
-    content: "Bairros";
+    content: "Belém";
     height: 30px;
     width: 90px;
     left: 2px;
@@ -237,7 +259,7 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(80px);
-    content: "Município";
+    content: "Marituba";
     background-color: #fff;
     color: #333;
 }
