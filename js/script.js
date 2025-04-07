@@ -131,7 +131,7 @@ function updateLocation(lat, lon) {
 window.onload = () => {
     loadWeatherData();
     loadCentroidsData();  
-    setInterval(loadWeatherData, 60000); 
+    setInterval(console.log("não recarregou"), 60000); 
 };
 
 
